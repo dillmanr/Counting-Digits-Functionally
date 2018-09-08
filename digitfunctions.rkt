@@ -1,6 +1,8 @@
-;; The first three lines of this file were inserted by DrRacket. They record metadata
-;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname digitfunctions) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+#lang typed/racket
+(module+ test
+  (require/typed rackunit
+                 [check-equal? (Any Any -> Any)]))
+
 (define-type LoD [Listof Char])
 
 (: num->digits : Number -> LoD)
